@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.demo.grpc";
+option java_outer_classname = "StreamingProto";
+
+package streaming;
+
+message UserResponse {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message MusicResponse {
+  string id = 1;
+  string name = 2;
+  string artist = 3;
+}
+
+message PlaylistResponse {
+  string id = 1;
+  string name = 2;
+  repeated string musicsIds = 3;
+}
+
+message EmptyRequest {}
+
+message UserRequest {
+  string userId = 1;
+}
+
+message PlaylistRequest {
+  string playlistId = 1;
+}
+
+message MusicRequest {
+  string musicId = 2;
+}
+
+message UserListResponse {
+  repeated UserResponse users = 1;
+}
+
+message MusicListResponse {
+  repeated MusicResponse musics = 1;
+}
+
+message PlaylistListResponse {
+  repeated PlaylistResponse playlists = 1;
+}
+
+service StreamingService {
+  rpc ListAllUsers (EmptyRequest) returns (UserListResponse);
+
+  rpc ListAllMusics (EmptyRequest) returns (MusicListResponse);
+
+  rpc ListPlaylistsByUser (UserRequest) returns (PlaylistListResponse);
+
+  rpc ListMusicsFromPlaylist (PlaylistRequest) returns (MusicListResponse);
+
+  rpc ListPlaylistsByMusic (MusicRequest) returns (PlaylistListResponse);
+}
