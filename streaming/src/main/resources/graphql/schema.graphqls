@@ -1,6 +1,8 @@
 type User {
     id: ID!
     name: String!
+    email: String!
+    country: String!
     age: Int!
 }
 
@@ -8,11 +10,15 @@ type Music {
     id: ID!
     name: String!
     artist: String!
+    genre: String!
+    durationSeconds: Int!
 }
 
 type Playlist {
     id: ID!
     name: String!
+    ownerId: String!
+    description: String!
     musicsIds: [String!]!
 }
 

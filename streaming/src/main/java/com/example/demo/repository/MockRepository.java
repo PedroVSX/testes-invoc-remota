@@ -3,15 +3,19 @@ package com.example.demo.repository;
 import com.example.demo.model.Music;
 import com.example.demo.model.Playlist;
 import com.example.demo.model.User;
+import com.example.demo.model.DataContainer; // Certifique-se de que o import está correto
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
+import java.io.InputStream;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public class MockRepository {
 
+    // Mantendo a sua estrutura original de Mapas e Índices rápidos
     private final Map<String, User> users = new ConcurrentHashMap<>();
     private final Map<String, Music> musics = new ConcurrentHashMap<>();
     private final Map<String, Playlist> playlists = new ConcurrentHashMap<>();
@@ -21,55 +25,63 @@ public class MockRepository {
 
     @PostConstruct
     public void carregarDadosIniciais() {
-        System.out.println("=== Populado banco de dados em memória ===");
+        System.out.println("=== Carregando banco de dados em memória a partir do JSON ===");
 
-        // 1. Gerar Músicas
-        for (int i = 1; i <= 200; i++) {
-            String id = "m" + i;
-            Music music = new Music(id, "Music " + i, "Artist " + ((i % 10) + 1));
-            musics.put(id, music);
-        }
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream("dados_streaming.json");
+            
+            if (inputStream == null) {
+                System.err.println("❌ Erro: Arquivo dados_streaming.json não encontrado em src/main/resources!");
+                return;
+            }
 
-        // 2. Gerar Usuários
-        for (int i = 1; i <= 50; i++) {
-            String id = "u" + i;
-            User user = new User(id, "Usuário " + i, 20 + (i % 30));
-            users.put(id, user);
+            DataContainer container = mapper.readValue(inputStream, DataContainer.class);
 
-            // Inicializa a lista de playlists deste usuário no índice
-            playlistsPerUser.put(id, new ArrayList<>());
-        }
+            // 1. Popular o Mapa de Músicas
+            if (container.getMusics() != null) {
+                for (Music music : container.getMusics()) {
+                    musics.put(music.getId(), music);
+                }
+            }
 
-        // 3. Gerar Playlists e fazer os vínculos (Índices)
-        int playlistCount = 1;
-        for (String userId : users.keySet()) {
-            // Cada usuário terá 2 playlists criadas automaticamente
-            for (int p = 1; p <= 2; p++) {
-                String playlistId = "p" + playlistCount;
-                Playlist playlist = new Playlist(playlistId, "Playlist " + p + " of " + userId);
+            // 2. Popular o Mapa de Usuários e inicializar o índice de playlists por usuário
+            if (container.getUsers() != null) {
+                for (User user : container.getUsers()) {
+                    users.put(user.getId(), user);
+                    playlistsPerUser.put(user.getId(), Collections.synchronizedList(new ArrayList<>()));
+                }
+            }
 
-                // Adiciona algumas músicas aleatórias nesta playlist (ex: 5 músicas)
-                for (int m = 1; m <= 5; m++) {
-                    int musicRandomId = (playlistCount * m) % 200 + 1;
-                    String musicId = "m" + musicRandomId;
+            // 3. Popular o Mapa de Playlists e construir os índices reverso/vínculos
+            if (container.getPlaylists() != null) {
+                for (Playlist playlist : container.getPlaylists()) {
+                    playlists.put(playlist.getId(), playlist);
 
-                    playlist.addMusic(musicId);
+                    // Alimenta o índice: Quais playlists pertencem ao usuário Y?
+                    if (playlist.getOwnerId() != null && playlistsPerUser.containsKey(playlist.getOwnerId())) {
+                        playlistsPerUser.get(playlist.getOwnerId()).add(playlist);
+                    }
 
                     // Alimenta o índice reverso: Quais playlists contêm a música X?
-                    playlistsPerMusic.computeIfAbsent(musicId, k -> Collections.synchronizedList(new ArrayList<>()))
-                            .add(playlist);
+                    if (playlist.getMusicsIds() != null) {
+                        for (String musicId : playlist.getMusicsIds()) {
+                            playlistsPerMusic.computeIfAbsent(musicId, k -> Collections.synchronizedList(new ArrayList<>()))
+                                    .add(playlist);
+                        }
+                    }
                 }
-
-                playlists.put(playlistId, playlist);
-
-                // Alimenta o índice: Quais playlists pertencem ao usuário Y?
-                playlistsPerUser.get(userId).add(playlist);
-
-                playlistCount++;
             }
-        }
 
-        System.out.println("=== Massa de dados carregada com sucesso! ===");
+            System.out.println("=== Massa de dados do JSON carregada com sucesso! ===");
+            System.out.println("👉 Usuários mapeados: " + users.size());
+            System.out.println("👉 Músicas mapeadas: " + musics.size());
+            System.out.println("👉 Playlists mapeadas: " + playlists.size());
+
+        } catch (Exception e) {
+            System.err.println("❌ Erro crítico ao carregar ou parsear o JSON: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     // Q1: Listar os dados de todos os usuários do serviço

@@ -9,19 +9,25 @@ package streaming;
 message UserResponse {
   string id = 1;
   string name = 2;
-  int32 age = 3;
+  string email = 3;
+  string country = 4;
+  int32 age = 5;
 }
 
 message MusicResponse {
   string id = 1;
   string name = 2;
   string artist = 3;
+  string genre = 4;
+  int32 durationSeconds = 5;
 }
 
 message PlaylistResponse {
   string id = 1;
   string name = 2;
-  repeated string musicsIds = 3;
+  string ownerId = 3;
+  string description = 4;
+  repeated string musicsIds = 5; 
 }
 
 message EmptyRequest {}
@@ -35,7 +41,7 @@ message PlaylistRequest {
 }
 
 message MusicRequest {
-  string musicId = 2;
+  string musicId = 1;
 }
 
 message UserListResponse {

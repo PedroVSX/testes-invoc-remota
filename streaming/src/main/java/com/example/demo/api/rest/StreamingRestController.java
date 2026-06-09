@@ -26,35 +26,30 @@ public class StreamingRestController {
     }
 
     // Q1: Listar os dados de todos os usuários do serviço
-    // URL de teste: GET http://localhost:8080/api/usuarios
     @GetMapping("/users")
     public ResponseEntity<Collection<User>> listAllUsers() {
         return ResponseEntity.ok(repository.searchAllUsers());
     }
 
     // Q2: Listar os dados de todas as músicas mantidas pelo serviço
-    // URL de teste: GET http://localhost:8080/api/musicas
     @GetMapping("/musics")
     public ResponseEntity<Collection<Music>> listAllMusics() {
         return ResponseEntity.ok(repository.searchAllMusics());
     }
 
     // Q3: Listar os dados de todas as playlists de um determinado usuário
-    // URL de teste: GET http://localhost:8080/api/usuarios/u1/playlists
     @GetMapping("/users/{userId}/playlists")
     public ResponseEntity<List<Playlist>> listPlaylistsByUser(@PathVariable String userId) {
         return ResponseEntity.ok(repository.searchPlaylistsByUser(userId));
     }
 
     // Q4: Listar os dados de todas as músicas de uma determinada playlist
-    // URL de teste: GET http://localhost:8080/api/playlists/p1/musicas
     @GetMapping("/playlists/{playlistId}/musics")
     public ResponseEntity<List<Music>> listMusicsFromPlaylist(@PathVariable String playlistId) {
         return ResponseEntity.ok(repository.searchMusicsFromPlaylist(playlistId));
     }
 
     // Q5: Listar os dados de todas as playlists que contêm uma determinada música
-    // URL de teste: GET http://localhost:8080/api/musicas/m1/playlists
     @GetMapping("/musics/{musicId}/playlists")
     public ResponseEntity<List<Playlist>> listPlaylistsByMusic(@PathVariable String musicId) {
         return ResponseEntity.ok(repository.searchPlaylistsByMusic(musicId));

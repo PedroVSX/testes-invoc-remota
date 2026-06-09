@@ -1,6 +1,7 @@
 package com.example.demo.api.grpc;
 
 import com.example.demo.grpc.*;
+import com.example.demo.grpc.StreamingServiceGrpc.StreamingServiceImplBase;
 import com.example.demo.model.Music;
 import com.example.demo.model.Playlist;
 import com.example.demo.model.User;
@@ -9,86 +10,117 @@ import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @GrpcService
-public class StreamingGrpcService extends StreamingServiceGrpc.StreamingServiceImplBase {
-
-    private final MockRepository repository;
+public class StreamingGrpcService extends StreamingServiceImplBase {
 
     @Autowired
-    public StreamingGrpcService(MockRepository repository) {
-        this.repository = repository;
-    }
+    private MockRepository repository;
 
-    // Q1: Listar todos os usuários
+    // Q1: Listar os dados de todos os usuários
     @Override
     public void listAllUsers(EmptyRequest request, StreamObserver<UserListResponse> responseObserver) {
-        List<UserResponse> grpcUsers = repository.searchAllUsers().stream()
-                .map(u -> UserResponse.newBuilder().setId(u.getId()).setName(u.getName()).setAge(u.getAge()).build())
-                .collect(Collectors.toList());
+        Collection<User> domainUsers = repository.searchAllUsers();
+        UserListResponse.Builder responseBuilder = UserListResponse.newBuilder();
 
-        UserListResponse response = UserListResponse.newBuilder().addAllUsers(grpcUsers).build();
-        responseObserver.onNext(response);
+        for (User user : domainUsers) {
+            UserResponse grpcUser = UserResponse.newBuilder()
+                    .setId(user.getId())
+                    .setName(user.getName())
+                    .setEmail(user.getEmail())
+                    .setCountry(user.getCountry())
+                    .setAge(user.getAge())
+                    .build();
+            responseBuilder.addUsers(grpcUser);
+        }
+
+        responseObserver.onNext(responseBuilder.build());
         responseObserver.onCompleted();
     }
 
-    // Q2: Listar todas as músicas
+    // Q2: Listar os dados de todas as músicas
     @Override
     public void listAllMusics(EmptyRequest request, StreamObserver<MusicListResponse> responseObserver) {
-        List<MusicResponse> grpcMusics = repository.searchAllMusics().stream()
-                .map(m -> MusicResponse.newBuilder().setId(m.getId()).setName(m.getName()).setArtist(m.getArtist()).build())
-                .collect(Collectors.toList());
+        Collection<Music> domainMusics = repository.searchAllMusics();
+        MusicListResponse.Builder responseBuilder = MusicListResponse.newBuilder();
 
-        MusicListResponse response = MusicListResponse.newBuilder().addAllMusics(grpcMusics).build();
-        responseObserver.onNext(response);
+        for (Music music : domainMusics) {
+            MusicResponse grpcMusic = MusicResponse.newBuilder()
+                    .setId(music.getId())
+                    .setName(music.getName())
+                    .setArtist(music.getArtist())
+                    .setGenre(music.getGenre())
+                    .setDurationSeconds(music.getDurationSeconds())
+                    .build();
+            responseBuilder.addMusics(grpcMusic);
+        }
+
+        responseObserver.onNext(responseBuilder.build());
         responseObserver.onCompleted();
     }
 
-    // Q3: Listar playlists de um usuário
+    // Q3: Listar as playlists de um determinado usuário
     @Override
     public void listPlaylistsByUser(UserRequest request, StreamObserver<PlaylistListResponse> responseObserver) {
-        List<PlaylistResponse> grpcPlaylists = repository.searchPlaylistsByUser(request.getUserId()).stream()
-                .map(p -> PlaylistResponse.newBuilder()
-                        .setId(p.getId())
-                        .setName(p.getName()) // Alterado para getName()
-                        .addAllMusicsIds(p.getMusicsIds()) // Alterado para getMusicsIds()
-                        .build())
-                .map(p -> (PlaylistResponse) p) // Garante a coerência de tipo para o Java
-                .collect(Collectors.toList());
+        List<Playlist> domainPlaylists = repository.searchPlaylistsByUser(request.getUserId());
+        PlaylistListResponse.Builder responseBuilder = PlaylistListResponse.newBuilder();
 
-        PlaylistListResponse response = PlaylistListResponse.newBuilder().addAllPlaylists(grpcPlaylists).build();
-        responseObserver.onNext(response);
+        for (Playlist playlist : domainPlaylists) {
+            PlaylistResponse grpcPlaylist = PlaylistResponse.newBuilder()
+                    .setId(playlist.getId())
+                    .setName(playlist.getName())
+                    .setOwnerId(playlist.getOwnerId())
+                    .setDescription(playlist.getDescription())
+                    .addAllMusicsIds(playlist.getMusicsIds())
+                    .build();
+            responseBuilder.addPlaylists(grpcPlaylist);
+        }
+
+        responseObserver.onNext(responseBuilder.build());
         responseObserver.onCompleted();
     }
 
-    // Q4: Listar músicas de uma playlist
+    // Q4: Listar todas as músicas de uma determinada playlist
     @Override
     public void listMusicsFromPlaylist(PlaylistRequest request, StreamObserver<MusicListResponse> responseObserver) {
-        List<MusicResponse> grpcMusics = repository.searchMusicsFromPlaylist(request.getPlaylistId()).stream()
-                .map(m -> MusicResponse.newBuilder().setId(m.getId()).setName(m.getName()).setArtist(m.getArtist()).build())
-                .collect(Collectors.toList());
+        List<Music> domainMusics = repository.searchMusicsFromPlaylist(request.getPlaylistId());
+        MusicListResponse.Builder responseBuilder = MusicListResponse.newBuilder();
 
-        MusicListResponse response = MusicListResponse.newBuilder().addAllMusics(grpcMusics).build();
-        responseObserver.onNext(response);
+        for (Music music : domainMusics) {
+            MusicResponse grpcMusic = MusicResponse.newBuilder()
+                    .setId(music.getId())
+                    .setName(music.getName())
+                    .setArtist(music.getArtist())
+                    .setGenre(music.getGenre())
+                    .setDurationSeconds(music.getDurationSeconds())
+                    .build();
+            responseBuilder.addMusics(grpcMusic);
+        }
+
+        responseObserver.onNext(responseBuilder.build());
         responseObserver.onCompleted();
     }
 
-    // Q5: Listar playlists que contêm uma música
+    // Q5: Listar todas as playlists que contêm uma determinada música
     @Override
     public void listPlaylistsByMusic(MusicRequest request, StreamObserver<PlaylistListResponse> responseObserver) {
-        List<PlaylistResponse> grpcPlaylists = repository.searchPlaylistsByMusic(request.getMusicId()).stream()
-                .map(p -> PlaylistResponse.newBuilder()
-                        .setId(p.getId())
-                        .setName(p.getName()) // Alterado para getName()
-                        .addAllMusicsIds(p.getMusicsIds()) // Alterado para getMusicsIds()
-                        .build())
-                .map(p -> (PlaylistResponse) p) // Garante a coerência de tipo para o Java
-                .collect(Collectors.toList());
+        List<Playlist> domainPlaylists = repository.searchPlaylistsByMusic(request.getMusicId());
+        PlaylistListResponse.Builder responseBuilder = PlaylistListResponse.newBuilder();
 
-        PlaylistListResponse response = PlaylistListResponse.newBuilder().addAllPlaylists(grpcPlaylists).build();
-        responseObserver.onNext(response);
+        for (Playlist playlist : domainPlaylists) {
+            PlaylistResponse grpcPlaylist = PlaylistResponse.newBuilder()
+                    .setId(playlist.getId())
+                    .setName(playlist.getName())
+                    .setOwnerId(playlist.getOwnerId())
+                    .setDescription(playlist.getDescription())
+                    .addAllMusicsIds(playlist.getMusicsIds())
+                    .build();
+            responseBuilder.addPlaylists(grpcPlaylist);
+        }
+
+        responseObserver.onNext(responseBuilder.build());
         responseObserver.onCompleted();
     }
 }
