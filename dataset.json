@@ -1,0 +1,1208 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nome": "Alice Silva",
+            "data_nascimento": "1985-05-12",
+            "sexo": "F",
+            "cidade_nascimento": "São Paulo"
+        },
+        {
+            "id": 2,
+            "nome": "Bruno Oliveira",
+            "data_nascimento": "1992-08-24",
+            "sexo": "M",
+            "cidade_nascimento": "Rio de Janeiro"
+        },
+        {
+            "id": 3,
+            "nome": "Carlos Souza",
+            "data_nascimento": "1978-01-30",
+            "sexo": "M",
+            "cidade_nascimento": "Belo Horizonte"
+        },
+        {
+            "id": 4,
+            "nome": "Daniela Mendes",
+            "data_nascimento": "2000-11-15",
+            "sexo": "F",
+            "cidade_nascimento": "Curitiba"
+        },
+        {
+            "id": 5,
+            "nome": "Eduardo Santos",
+            "data_nascimento": "1995-03-05",
+            "sexo": "M",
+            "cidade_nascimento": "Salvador"
+        },
+        {
+            "id": 6,
+            "nome": "Fernanda Costa",
+            "data_nascimento": "1988-04-12",
+            "sexo": "F",
+            "cidade_nascimento": "Belo Horizonte"
+        },
+        {
+            "id": 7,
+            "nome": "Gabriel Rocha",
+            "data_nascimento": "1994-09-30",
+            "sexo": "M",
+            "cidade_nascimento": "Porto Alegre"
+        },
+        {
+            "id": 8,
+            "nome": "Heloísa Lima",
+            "data_nascimento": "2001-02-15",
+            "sexo": "F",
+            "cidade_nascimento": "Recife"
+        },
+        {
+            "id": 9,
+            "nome": "Igor Farias",
+            "data_nascimento": "1982-12-05",
+            "sexo": "M",
+            "cidade_nascimento": "Brasília"
+        },
+        {
+            "id": 10,
+            "nome": "Júlia Martins",
+            "data_nascimento": "1997-07-20",
+            "sexo": "F",
+            "cidade_nascimento": "Fortaleza"
+        },
+        {
+            "id": 11,
+            "nome": "Kleber Nunes",
+            "data_nascimento": "1975-05-30",
+            "sexo": "M",
+            "cidade_nascimento": "Manaus"
+        },
+        {
+            "id": 12,
+            "nome": "Larissa Barros",
+            "data_nascimento": "1999-10-18",
+            "sexo": "F",
+            "cidade_nascimento": "Salvador"
+        },
+        {
+            "id": 13,
+            "nome": "Marcelo Vieira",
+            "data_nascimento": "1986-06-25",
+            "sexo": "M",
+            "cidade_nascimento": "Curitiba"
+        },
+        {
+            "id": 14,
+            "nome": "Natália Gomes",
+            "data_nascimento": "1991-01-12",
+            "sexo": "F",
+            "cidade_nascimento": "São Paulo"
+        },
+        {
+            "id": 15,
+            "nome": "Otávio Pereira",
+            "data_nascimento": "1980-03-08",
+            "sexo": "M",
+            "cidade_nascimento": "Rio de Janeiro"
+        },
+        {
+            "id": 16,
+            "nome": "Patrícia Alves",
+            "data_nascimento": "1993-06-20",
+            "sexo": "F",
+            "cidade_nascimento": "Belo Horizonte"
+        },
+        {
+            "id": 17,
+            "nome": "Ricardo Castro",
+            "data_nascimento": "1985-02-14",
+            "sexo": "M",
+            "cidade_nascimento": "São Paulo"
+        },
+        {
+            "id": 18,
+            "nome": "Sabrina Melo",
+            "data_nascimento": "1998-11-30",
+            "sexo": "F",
+            "cidade_nascimento": "Rio de Janeiro"
+        },
+        {
+            "id": 19,
+            "nome": "Thiago Souza",
+            "data_nascimento": "1979-05-18",
+            "sexo": "M",
+            "cidade_nascimento": "Curitiba"
+        },
+        {
+            "id": 20,
+            "nome": "Vanessa Ribeiro",
+            "data_nascimento": "1996-03-25",
+            "sexo": "F",
+            "cidade_nascimento": "Porto Alegre"
+        },
+        {
+            "id": 21,
+            "nome": "William Duarte",
+            "data_nascimento": "1987-08-10",
+            "sexo": "M",
+            "cidade_nascimento": "Brasília"
+        },
+        {
+            "id": 22,
+            "nome": "Ximena Pires",
+            "data_nascimento": "1990-12-05",
+            "sexo": "F",
+            "cidade_nascimento": "Salvador"
+        },
+        {
+            "id": 23,
+            "nome": "Yuri Teixeira",
+            "data_nascimento": "1983-04-12",
+            "sexo": "M",
+            "cidade_nascimento": "Fortaleza"
+        },
+        {
+            "id": 24,
+            "nome": "Zilda Cardoso",
+            "data_nascimento": "1972-07-28",
+            "sexo": "F",
+            "cidade_nascimento": "Recife"
+        },
+        {
+            "id": 25,
+            "nome": "André Neves",
+            "data_nascimento": "1995-09-15",
+            "sexo": "M",
+            "cidade_nascimento": "Manaus"
+        },
+        {
+            "id": 26,
+            "nome": "Beatriz Lemos",
+            "data_nascimento": "1994-04-12",
+            "sexo": "F",
+            "cidade_nascimento": "Porto Alegre"
+        },
+        {
+            "id": 27,
+            "nome": "Caio Ramos",
+            "data_nascimento": "1988-09-30",
+            "sexo": "M",
+            "cidade_nascimento": "Rio de Janeiro"
+        },
+        {
+            "id": 28,
+            "nome": "Diana Reis",
+            "data_nascimento": "2002-02-15",
+            "sexo": "F",
+            "cidade_nascimento": "São Paulo"
+        },
+        {
+            "id": 29,
+            "nome": "Elias Moraes",
+            "data_nascimento": "1985-12-05",
+            "sexo": "M",
+            "cidade_nascimento": "Curitiba"
+        },
+        {
+            "id": 30,
+            "nome": "Fábio Dantas",
+            "data_nascimento": "1997-07-20",
+            "sexo": "M",
+            "cidade_nascimento": "Belo Horizonte"
+        },
+        {
+            "id": 31,
+            "nome": "Giovanna Cruz",
+            "data_nascimento": "2000-05-30",
+            "sexo": "F",
+            "cidade_nascimento": "Salvador"
+        },
+        {
+            "id": 32,
+            "nome": "Hugo Menezes",
+            "data_nascimento": "1983-10-18",
+            "sexo": "M",
+            "cidade_nascimento": "Brasília"
+        },
+        {
+            "id": 33,
+            "nome": "Isabela Campos",
+            "data_nascimento": "1994-06-25",
+            "sexo": "F",
+            "cidade_nascimento": "Recife"
+        },
+        {
+            "id": 34,
+            "nome": "João Tavares",
+            "data_nascimento": "1980-01-12",
+            "sexo": "M",
+            "cidade_nascimento": "Fortaleza"
+        },
+        {
+            "id": 35,
+            "nome": "Karina Siqueira",
+            "data_nascimento": "1994-03-08",
+            "sexo": "F",
+            "cidade_nascimento": "Manaus"
+        },
+        {
+            "id": 36,
+            "nome": "Leandro Matos",
+            "data_nascimento": "1987-11-15",
+            "sexo": "M",
+            "cidade_nascimento": "Recife"
+        },
+        {
+            "id": 37,
+            "nome": "Marina Fialho",
+            "data_nascimento": "1994-02-28",
+            "sexo": "F",
+            "cidade_nascimento": "Porto Alegre"
+        },
+        {
+            "id": 38,
+            "nome": "Nicolas Porto",
+            "data_nascimento": "2000-05-18",
+            "sexo": "M",
+            "cidade_nascimento": "São Paulo"
+        },
+        {
+            "id": 39,
+            "nome": "Olivia Jardim",
+            "data_nascimento": "1995-12-05",
+            "sexo": "F",
+            "cidade_nascimento": "Rio de Janeiro"
+        },
+        {
+            "id": 40,
+            "nome": "Pedro Assis",
+            "data_nascimento": "1983-04-12",
+            "sexo": "M",
+            "cidade_nascimento": "Belo Horizonte"
+        },
+        {
+            "id": 41,
+            "nome": "Quitéria Lins",
+            "data_nascimento": "1972-07-28",
+            "sexo": "F",
+            "cidade_nascimento": "Salvador"
+        },
+        {
+            "id": 42,
+            "nome": "Rafael Espínola",
+            "data_nascimento": "1995-09-15",
+            "sexo": "M",
+            "cidade_nascimento": "Curitiba"
+        },
+        {
+            "id": 43,
+            "nome": "Sara Fontes",
+            "data_nascimento": "1990-12-05",
+            "sexo": "F",
+            "cidade_nascimento": "Brasília"
+        },
+        {
+            "id": 44,
+            "nome": "Tomás Rocha",
+            "data_nascimento": "1983-04-12",
+            "sexo": "M",
+            "cidade_nascimento": "Fortaleza"
+        },
+        {
+            "id": 45,
+            "nome": "Úrsula Paes",
+            "data_nascimento": "1972-07-28",
+            "sexo": "F",
+            "cidade_nascimento": "Recife"
+        },
+        {
+            "id": 46,
+            "nome": "Victor Aguiar",
+            "data_nascimento": "1988-06-20",
+            "sexo": "M",
+            "cidade_nascimento": "Belo Horizonte"
+        },
+        {
+            "id": 47,
+            "nome": "Wanda Furtado",
+            "data_nascimento": "1975-02-14",
+            "sexo": "F",
+            "cidade_nascimento": "São Paulo"
+        },
+        {
+            "id": 48,
+            "nome": "Xavier Bastos",
+            "data_nascimento": "1992-11-30",
+            "sexo": "M",
+            "cidade_nascimento": "Rio de Janeiro"
+        },
+        {
+            "id": 49,
+            "nome": "Yasmin Goulart",
+            "data_nascimento": "2001-05-18",
+            "sexo": "F",
+            "cidade_nascimento": "Curitiba"
+        },
+        {
+            "id": 50,
+            "nome": "Zeca Pagodinho",
+            "data_nascimento": "1959-02-04",
+            "sexo": "M",
+            "cidade_nascimento": "Rio de Janeiro"
+        }
+    ],
+    "musicas": [
+        {
+            "id": 101,
+            "titulo": "Bohemian Rhapsody",
+            "artista": "Queen",
+            "genero": "Rock",
+            "duracao": 354
+        },
+        {
+            "id": 102,
+            "titulo": "Imagine",
+            "artista": "John Lennon",
+            "genero": "Pop",
+            "duracao": 183
+        },
+        {
+            "id": 103,
+            "titulo": "Hotel California",
+            "artista": "Eagles",
+            "genero": "Rock",
+            "duracao": 391
+        },
+        {
+            "id": 104,
+            "titulo": "Billie Jean",
+            "artista": "Michael Jackson",
+            "genero": "Pop",
+            "duracao": 294
+        },
+        {
+            "id": 105,
+            "titulo": "Smells Like Teen Spirit",
+            "artista": "Nirvana",
+            "genero": "Grunge",
+            "duracao": 301
+        },
+        {
+            "id": 106,
+            "titulo": "Hey Jude",
+            "artista": "The Beatles",
+            "genero": "Rock",
+            "duracao": 431
+        },
+        {
+            "id": 107,
+            "titulo": "Dancing Queen",
+            "artista": "ABBA",
+            "genero": "Pop",
+            "duracao": 232
+        },
+        {
+            "id": 108,
+            "titulo": "Sweet Child o' Mine",
+            "artista": "Guns N' Roses",
+            "genero": "Hard Rock",
+            "duracao": 356
+        },
+        {
+            "id": 109,
+            "titulo": "Back in Black",
+            "artista": "AC/DC",
+            "genero": "Hard Rock",
+            "duracao": 255
+        },
+        {
+            "id": 110,
+            "titulo": "Wonderwall",
+            "artista": "Oasis",
+            "genero": "Britpop",
+            "duracao": 258
+        },
+        {
+            "id": 111,
+            "titulo": "Shape of You",
+            "artista": "Ed Sheeran",
+            "genero": "Pop",
+            "duracao": 233
+        },
+        {
+            "id": 112,
+            "titulo": "Rolling in the Deep",
+            "artista": "Adele",
+            "genero": "Soul",
+            "duracao": 228
+        },
+        {
+            "id": 113,
+            "titulo": "Thriller",
+            "artista": "Michael Jackson",
+            "genero": "Pop",
+            "duracao": 357
+        },
+        {
+            "id": 114,
+            "titulo": "Stairway to Heaven",
+            "artista": "Led Zeppelin",
+            "genero": "Rock",
+            "duracao": 482
+        },
+        {
+            "id": 115,
+            "titulo": "Lose Yourself",
+            "artista": "Eminem",
+            "genero": "Hip Hop",
+            "duracao": 326
+        },
+        {
+            "id": 116,
+            "titulo": "Uptown Funk",
+            "artista": "Mark Ronson",
+            "genero": "Funk",
+            "duracao": 270
+        },
+        {
+            "id": 117,
+            "titulo": "Respect",
+            "artista": "Aretha Franklin",
+            "genero": "Soul",
+            "duracao": 147
+        },
+        {
+            "id": 118,
+            "titulo": "Purple Haze",
+            "artista": "Jimi Hendrix",
+            "genero": "Rock",
+            "duracao": 171
+        },
+        {
+            "id": 119,
+            "titulo": "Every Breath You Take",
+            "artista": "The Police",
+            "genero": "Soft Rock",
+            "duracao": 253
+        },
+        {
+            "id": 120,
+            "titulo": "Superstition",
+            "artista": "Stevie Wonder",
+            "genero": "Funk",
+            "duracao": 266
+        },
+        {
+            "id": 121,
+            "titulo": "Piano Man",
+            "artista": "Billy Joel",
+            "genero": "Soft Rock",
+            "duracao": 339
+        },
+        {
+            "id": 122,
+            "titulo": "Don't Stop Believin'",
+            "artista": "Journey",
+            "genero": "Hard Rock",
+            "duracao": 251
+        },
+        {
+            "id": 123,
+            "titulo": "Wish You Were Here",
+            "artista": "Pink Floyd",
+            "genero": "Prog Rock",
+            "duracao": 334
+        },
+        {
+            "id": 124,
+            "titulo": "Hallelujah",
+            "artista": "Jeff Buckley",
+            "genero": "Indie",
+            "duracao": 413
+        },
+        {
+            "id": 125,
+            "titulo": "Life on Mars?",
+            "artista": "David Bowie",
+            "genero": "Glam Rock",
+            "duracao": 234
+        },
+        {
+            "id": 126,
+            "titulo": "Blinding Lights",
+            "artista": "The Weeknd",
+            "genero": "Synth-pop",
+            "duracao": 200
+        },
+        {
+            "id": 127,
+            "titulo": "Bad Guy",
+            "artista": "Billie Eilish",
+            "genero": "Electropop",
+            "duracao": 194
+        },
+        {
+            "id": 128,
+            "titulo": "Levitating",
+            "artista": "Dua Lipa",
+            "genero": "Dance-pop",
+            "duracao": 203
+        },
+        {
+            "id": 129,
+            "titulo": "Stay",
+            "artista": "The Kid LAROI",
+            "genero": "Pop",
+            "duracao": 141
+        },
+        {
+            "id": 130,
+            "titulo": "Drivers License",
+            "artista": "Olivia Rodrigo",
+            "genero": "Bedroom Pop",
+            "duracao": 242
+        },
+        {
+            "id": 131,
+            "titulo": "Peaches",
+            "artista": "Justin Bieber",
+            "genero": "R&B",
+            "duracao": 198
+        },
+        {
+            "id": 132,
+            "titulo": "Good 4 U",
+            "artista": "Olivia Rodrigo",
+            "genero": "Pop-punk",
+            "duracao": 178
+        },
+        {
+            "id": 133,
+            "titulo": "Save Your Tears",
+            "artista": "The Weeknd",
+            "genero": "Synth-pop",
+            "duracao": 215
+        },
+        {
+            "id": 134,
+            "titulo": "Kiss Me More",
+            "artista": "Doja Cat",
+            "genero": "Pop Rap",
+            "duracao": 208
+        },
+        {
+            "id": 135,
+            "titulo": "Montero",
+            "artista": "Lil Nas X",
+            "genero": "Pop Rap",
+            "duracao": 137
+        },
+        {
+            "id": 136,
+            "titulo": "Heat Waves",
+            "artista": "Glass Animals",
+            "genero": "Indie Pop",
+            "duracao": 238
+        },
+        {
+            "id": 137,
+            "titulo": "Industry Baby",
+            "artista": "Lil Nas X",
+            "genero": "Pop Rap",
+            "duracao": 212
+        },
+        {
+            "id": 138,
+            "titulo": "Bad Habits",
+            "artista": "Ed Sheeran",
+            "genero": "Dance-pop",
+            "duracao": 231
+        },
+        {
+            "id": 139,
+            "titulo": "Beggin'",
+            "artista": "Måneskin",
+            "genero": "Rock",
+            "duracao": 211
+        },
+        {
+            "id": 140,
+            "titulo": "Butter",
+            "artista": "BTS",
+            "genero": "K-pop",
+            "duracao": 164
+        },
+        {
+            "id": 141,
+            "titulo": "Dynamite",
+            "artista": "BTS",
+            "genero": "Disco-pop",
+            "duracao": 199
+        },
+        {
+            "id": 142,
+            "titulo": "Watermelon Sugar",
+            "artista": "Harry Styles",
+            "genero": "Pop",
+            "duracao": 174
+        },
+        {
+            "id": 143,
+            "titulo": "Circles",
+            "artista": "Post Malone",
+            "genero": "Pop",
+            "duracao": 215
+        },
+        {
+            "id": 144,
+            "titulo": "Memories",
+            "artista": "Maroon 5",
+            "genero": "Pop",
+            "duracao": 189
+        },
+        {
+            "id": 145,
+            "titulo": "Someone You Loved",
+            "artista": "Lewis Capaldi",
+            "genero": "Pop",
+            "duracao": 182
+        },
+        {
+            "id": 146,
+            "titulo": "Sunflower",
+            "artista": "Post Malone",
+            "genero": "Dream Pop",
+            "duracao": 158
+        },
+        {
+            "id": 147,
+            "titulo": "Senorita",
+            "artista": "Shawn Mendes",
+            "genero": "Pop",
+            "duracao": 191
+        },
+        {
+            "id": 148,
+            "titulo": "Old Town Road",
+            "artista": "Lil Nas X",
+            "genero": "Country Rap",
+            "duracao": 113
+        },
+        {
+            "id": 149,
+            "titulo": "Happier",
+            "artista": "Marshmello",
+            "genero": "Electronic",
+            "duracao": 214
+        },
+        {
+            "id": 150,
+            "titulo": "Shallow",
+            "artista": "Lady Gaga",
+            "genero": "Country Rock",
+            "duracao": 216
+        }
+    ],
+    "playlists": [
+        {
+            "id": 1,
+            "usuario_id": 1,
+            "nome": "Rock Clássico",
+            "musicas": [
+                101,
+                103,
+                114
+            ]
+        },
+        {
+            "id": 2,
+            "usuario_id": 2,
+            "nome": "Pop 2020",
+            "musicas": [
+                126,
+                128,
+                131
+            ]
+        },
+        {
+            "id": 3,
+            "usuario_id": 3,
+            "nome": "Relaxante",
+            "musicas": [
+                102,
+                124,
+                150
+            ]
+        },
+        {
+            "id": 4,
+            "usuario_id": 4,
+            "nome": "Treino",
+            "musicas": [
+                109,
+                115,
+                137
+            ]
+        },
+        {
+            "id": 5,
+            "usuario_id": 5,
+            "nome": "Flashback",
+            "musicas": [
+                104,
+                106,
+                107
+            ]
+        },
+        {
+            "id": 6,
+            "usuario_id": 6,
+            "nome": "Favoritas",
+            "musicas": [
+                112,
+                145,
+                149
+            ]
+        },
+        {
+            "id": 7,
+            "usuario_id": 7,
+            "nome": "Festa",
+            "musicas": [
+                116,
+                140,
+                141
+            ]
+        },
+        {
+            "id": 8,
+            "usuario_id": 8,
+            "nome": "Indie Hits",
+            "musicas": [
+                110,
+                136,
+                139
+            ]
+        },
+        {
+            "id": 9,
+            "usuario_id": 9,
+            "nome": "Acústico",
+            "musicas": [
+                121,
+                123,
+                144
+            ]
+        },
+        {
+            "id": 10,
+            "usuario_id": 10,
+            "nome": "Top 10",
+            "musicas": [
+                101,
+                105,
+                108
+            ]
+        },
+        {
+            "id": 11,
+            "usuario_id": 11,
+            "nome": "Road Trip",
+            "musicas": [
+                122,
+                133,
+                142
+            ]
+        },
+        {
+            "id": 12,
+            "usuario_id": 12,
+            "nome": "Mood Indie",
+            "musicas": [
+                105,
+                110,
+                136
+            ]
+        },
+        {
+            "id": 13,
+            "usuario_id": 13,
+            "nome": "Rap Nacional",
+            "musicas": [
+                115,
+                135,
+                137
+            ]
+        },
+        {
+            "id": 14,
+            "usuario_id": 14,
+            "nome": "Chill Mix",
+            "musicas": [
+                129,
+                143,
+                146
+            ]
+        },
+        {
+            "id": 15,
+            "usuario_id": 15,
+            "nome": "Anos 90",
+            "musicas": [
+                105,
+                110,
+                119
+            ]
+        },
+        {
+            "id": 16,
+            "usuario_id": 16,
+            "nome": "Pop Variado",
+            "musicas": [
+                111,
+                138,
+                147
+            ]
+        },
+        {
+            "id": 17,
+            "usuario_id": 17,
+            "nome": "Rock Pesado",
+            "musicas": [
+                108,
+                109,
+                118
+            ]
+        },
+        {
+            "id": 18,
+            "usuario_id": 18,
+            "nome": "Vibe Boa",
+            "musicas": [
+                128,
+                134,
+                142
+            ]
+        },
+        {
+            "id": 19,
+            "usuario_id": 19,
+            "nome": "Clássicos",
+            "musicas": [
+                106,
+                114,
+                120
+            ]
+        },
+        {
+            "id": 20,
+            "usuario_id": 20,
+            "nome": "Noite",
+            "musicas": [
+                126,
+                133,
+                138
+            ]
+        },
+        {
+            "id": 21,
+            "usuario_id": 21,
+            "nome": "Running",
+            "musicas": [
+                109,
+                116,
+                141
+            ]
+        },
+        {
+            "id": 22,
+            "usuario_id": 22,
+            "nome": "Piano",
+            "musicas": [
+                121,
+                124,
+                130
+            ]
+        },
+        {
+            "id": 23,
+            "usuario_id": 23,
+            "nome": "Duo Rock",
+            "musicas": [
+                101,
+                103,
+                108
+            ]
+        },
+        {
+            "id": 24,
+            "usuario_id": 24,
+            "nome": "Hits Mundiais",
+            "musicas": [
+                111,
+                140,
+                148
+            ]
+        },
+        {
+            "id": 25,
+            "usuario_id": 25,
+            "nome": "Spotify Top",
+            "musicas": [
+                127,
+                132,
+                146
+            ]
+        },
+        {
+            "id": 26,
+            "usuario_id": 26,
+            "nome": "Sing Along",
+            "musicas": [
+                107,
+                122,
+                144
+            ]
+        },
+        {
+            "id": 27,
+            "usuario_id": 27,
+            "nome": "Rock Alternativo",
+            "musicas": [
+                105,
+                110,
+                139
+            ]
+        },
+        {
+            "id": 28,
+            "usuario_id": 28,
+            "nome": "Pop Internacional",
+            "musicas": [
+                113,
+                116,
+                147
+            ]
+        },
+        {
+            "id": 29,
+            "usuario_id": 29,
+            "nome": "Trabalho",
+            "musicas": [
+                102,
+                121,
+                123
+            ]
+        },
+        {
+            "id": 30,
+            "usuario_id": 30,
+            "nome": "Especial",
+            "musicas": [
+                117,
+                120,
+                125
+            ]
+        },
+        {
+            "id": 31,
+            "usuario_id": 31,
+            "nome": "Lançamentos",
+            "musicas": [
+                126,
+                127,
+                128
+            ]
+        },
+        {
+            "id": 32,
+            "usuario_id": 32,
+            "nome": "Festa 80s",
+            "musicas": [
+                104,
+                107,
+                119
+            ]
+        },
+        {
+            "id": 33,
+            "usuario_id": 33,
+            "nome": "Acústico Relax",
+            "musicas": [
+                102,
+                124,
+                145
+            ]
+        },
+        {
+            "id": 34,
+            "usuario_id": 34,
+            "nome": "Gym Mix",
+            "musicas": [
+                109,
+                115,
+                137
+            ]
+        },
+        {
+            "id": 35,
+            "usuario_id": 35,
+            "nome": "Summer Vibe",
+            "musicas": [
+                134,
+                142,
+                147
+            ]
+        },
+        {
+            "id": 36,
+            "usuario_id": 36,
+            "nome": "Rock Antigo",
+            "musicas": [
+                101,
+                114,
+                118
+            ]
+        },
+        {
+            "id": 37,
+            "usuario_id": 37,
+            "nome": "Pop Atual",
+            "musicas": [
+                131,
+                133,
+                138
+            ]
+        },
+        {
+            "id": 38,
+            "usuario_id": 38,
+            "nome": "Flow",
+            "musicas": [
+                135,
+                137,
+                148
+            ]
+        },
+        {
+            "id": 39,
+            "usuario_id": 39,
+            "nome": "Calmaria",
+            "musicas": [
+                102,
+                123,
+                150
+            ]
+        },
+        {
+            "id": 40,
+            "usuario_id": 40,
+            "nome": "Nostalgia",
+            "musicas": [
+                106,
+                107,
+                120
+            ]
+        },
+        {
+            "id": 41,
+            "usuario_id": 41,
+            "nome": "Dance Party",
+            "musicas": [
+                116,
+                140,
+                141
+            ]
+        },
+        {
+            "id": 42,
+            "usuario_id": 42,
+            "nome": "Rock Vibe",
+            "musicas": [
+                103,
+                108,
+                110
+            ]
+        },
+        {
+            "id": 43,
+            "usuario_id": 43,
+            "nome": "Top Charts",
+            "musicas": [
+                126,
+                127,
+                146
+            ]
+        },
+        {
+            "id": 44,
+            "usuario_id": 44,
+            "nome": "Coffee Break",
+            "musicas": [
+                121,
+                124,
+                144
+            ]
+        },
+        {
+            "id": 45,
+            "usuario_id": 45,
+            "nome": "Energy",
+            "musicas": [
+                109,
+                116,
+                132
+            ]
+        },
+        {
+            "id": 46,
+            "usuario_id": 46,
+            "nome": "Mix Rock",
+            "musicas": [
+                101,
+                105,
+                114
+            ]
+        },
+        {
+            "id": 47,
+            "usuario_id": 47,
+            "nome": "Pop Hits",
+            "musicas": [
+                111,
+                112,
+                133
+            ]
+        },
+        {
+            "id": 48,
+            "usuario_id": 48,
+            "nome": "Rap Session",
+            "musicas": [
+                115,
+                135,
+                148
+            ]
+        },
+        {
+            "id": 49,
+            "usuario_id": 49,
+            "nome": "Soft Rock",
+            "musicas": [
+                103,
+                119,
+                125
+            ]
+        },
+        {
+            "id": 50,
+            "usuario_id": 50,
+            "nome": "Destaques",
+            "musicas": [
+                140,
+                141,
+                150
+            ]
+        }
+    ]
+}

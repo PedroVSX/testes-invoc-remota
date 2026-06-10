@@ -1,0 +1,108 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="music.soap.service"
+           targetNamespace="music.soap.service" elementFormDefault="qualified">
+
+    <!-- Entidades -->
+    <xs:complexType name="usuario">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="dataNascimento" type="xs:string" minOccurs="0"/>
+            <xs:element name="sexo" type="xs:string" minOccurs="0"/>
+            <xs:element name="cidadeNascimento" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="musica">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="artista" type="xs:string"/>
+            <xs:element name="genero" type="xs:string" minOccurs="0"/>
+            <xs:element name="duracao" type="xs:int" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="playlist">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="usuario_id" type="xs:int"/>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="musicas" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Requests -->
+    <xs:element name="get_usuarios">
+        <xs:complexType><xs:sequence/></xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_musicas">
+        <xs:complexType><xs:sequence/></xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_playlists_usuario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuario_id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_musicas_playlist">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="playlist_id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_playlists_com_musica">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="musica_id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Responses -->
+    <xs:element name="get_usuariosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuarios" type="tns:usuario" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_musicasResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="musicas" type="tns:musica" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_playlists_usuarioResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="playlists" type="tns:playlist" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_musicas_playlistResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="musicas" type="tns:musica" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="get_playlists_com_musicaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="playlists" type="tns:playlist" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

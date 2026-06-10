@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package music;
+
+// ── Mensagens de request ─────────────────────────────────────────────────────
+
+message Empty {}
+
+message UsuarioRequest {
+    int32 usuario_id = 1;
+}
+
+message PlaylistRequest {
+    int32 playlist_id = 1;
+}
+
+message MusicaRequest {
+    int32 musica_id = 1;
+}
+
+// ── Mensagens de dados ────────────────────────────────────────────────────────
+
+message Usuario {
+    int32 id = 1;
+    string nome = 2;
+}
+
+message Musica {
+    int32 id = 1;
+    string titulo = 2;
+    string artista = 3;
+}
+
+message Playlist {
+    int32 id = 1;
+    string nome = 2;
+    int32 usuario_id = 3;
+    repeated int32 musicas = 4;
+}
+
+// ── Mensagens de response ─────────────────────────────────────────────────────
+
+message UsuariosResponse {
+    repeated Usuario usuarios = 1;
+}
+
+message MusicasResponse {
+    repeated Musica musicas = 1;
+}
+
+message PlaylistsResponse {
+    repeated Playlist playlists = 1;
+}
+
+// ── Serviço ───────────────────────────────────────────────────────────────────
+
+service MusicService {
+    // GET /usuarios
+    rpc GetUsuarios (Empty) returns (UsuariosResponse);
+
+    // GET /musicas
+    rpc GetMusicas (Empty) returns (MusicasResponse);
+
+    // GET /usuarios/<usuario_id>/playlists
+    rpc GetPlaylistsUsuario (UsuarioRequest) returns (PlaylistsResponse);
+
+    // GET /playlists/<playlist_id>/musicas
+    rpc GetMusicasPlaylist (PlaylistRequest) returns (MusicasResponse);
+
+    // GET /musicas/<musica_id>/playlists
+    rpc GetPlaylistsComMusica (MusicaRequest) returns (PlaylistsResponse);
+}
