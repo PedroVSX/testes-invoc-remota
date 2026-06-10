@@ -14,7 +14,7 @@
     { "id": "u12", "name": "Usuário 12", "email": "usuario12@streaming.com", "country": "Portugal", "age": 32 },
     { "id": "u13", "name": "Usuário 13", "email": "usuario13@streaming.com", "country": "Brasil", "age": 33 },
     { "id": "u14", "name": "Usuário 14", "email": "usuario14@streaming.com", "country": "Angola", "age": 34 },
-    { "id": "u15", "name": "Usuário 15", "email": "usuario15@streaming.com", "country": "Brasil", "age": 35 },
+    { "id": "u15", "name": "Usuário 15", "email": "usuario15@streaming.com", "country": "Brazil", "age": 35 },
     { "id": "u16", "name": "Usuário 16", "email": "usuario16@streaming.com", "country": "Portugal", "age": 36 },
     { "id": "u17", "name": "Usuário 17", "email": "usuario17@streaming.com", "country": "Brasil", "age": 37 },
     { "id": "u18", "name": "Usuário 18", "email": "usuario18@streaming.com", "country": "Moçambique", "age": 38 },
