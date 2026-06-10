@@ -1,0 +1,16 @@
+Language,Protocol,Intensity,Method,Name,Error,Occurrences
+python,soap,pesado,POST,SOAP_listMusicsFromPlaylist,"ConnectionResetError(104, 'Connection reset by peer')",4112
+python,soap,pesado,POST,SOAP_listAllUsers,"ConnectionResetError(104, 'Connection reset by peer')",1413
+python,soap,pesado,POST,SOAP_listPlaylistsByUser,"ConnectionResetError(104, 'Connection reset by peer')",6793
+python,soap,pesado,POST,SOAP_listPlaylistsByMusic,"ConnectionResetError(104, 'Connection reset by peer')",1333
+python,soap,pesado,POST,SOAP_listAllMusics,"ConnectionResetError(104, 'Connection reset by peer')",1362
+python,soap,medio,POST,SOAP_listMusicsFromPlaylist,"ConnectionResetError(104, 'Connection reset by peer')",4617
+python,soap,medio,POST,SOAP_listAllUsers,"ConnectionResetError(104, 'Connection reset by peer')",1490
+python,soap,medio,POST,SOAP_listPlaylistsByUser,"ConnectionResetError(104, 'Connection reset by peer')",7695
+python,soap,medio,POST,SOAP_listPlaylistsByMusic,"ConnectionResetError(104, 'Connection reset by peer')",1541
+python,soap,medio,POST,SOAP_listAllMusics,"ConnectionResetError(104, 'Connection reset by peer')",1608
+python,soap,leve,POST,SOAP_listMusicsFromPlaylist,"ConnectionResetError(104, 'Connection reset by peer')",2234
+python,soap,leve,POST,SOAP_listAllUsers,"ConnectionResetError(104, 'Connection reset by peer')",790
+python,soap,leve,POST,SOAP_listPlaylistsByUser,"ConnectionResetError(104, 'Connection reset by peer')",3744
+python,soap,leve,POST,SOAP_listPlaylistsByMusic,"ConnectionResetError(104, 'Connection reset by peer')",755
+python,soap,leve,POST,SOAP_listAllMusics,"ConnectionResetError(104, 'Connection reset by peer')",727
